@@ -15,10 +15,10 @@ defineEmits(['click-cart'])
             <input type="text" class="search" placeholder="Buscar..." />
           </div>
           <ul>
-            <li>Termos</li>
+            <li><RouterLink to="/termos">Termo</RouterLink></li>
             <li> <RouterLink to="/equipe">Equipe</RouterLink></li>
-            <li>Envio</li>
-            <li>Devoluções</li>
+            <li><RouterLink to="/Envio">Envio</RouterLink></li>
+            <li><RouterLink to="/Devolucoes">Devoluções</RouterLink></li>
           </ul>
           <ul class="icons">
             <li @click="$emit('click-cart')"><span class="mdi mdi-cart"></span></li>

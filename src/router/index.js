@@ -13,6 +13,21 @@ const router = createRouter({
             path: "/equipe" ,
             name: 'Team' ,
             component: () => import(`@/views/TeamView.vue`),
+        },
+        {
+            path: "/termos" ,
+            name: 'Termo' ,
+            component: () => import('@/views/TermoView.vue'),
+        },
+        {
+            path: "/Envio" ,
+            name: 'Envio' ,
+            component: () => import('@/views/EnvioView.vue'),
+        },
+        {
+            path: "/Devolucoes" ,
+            name: 'Devolucoes',
+            component: () => import('@/views/DevolucoesView.vue'),
         }
     ]
 });
