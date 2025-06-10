@@ -1,6 +1,6 @@
 <script setup>
 defineProps(['cart'])
-defineEmits(['voltal', 'increment-book', 'decrement-book'])
+defineEmits(['hide-cart', 'increment-book', 'decrement-book'])
 </script>
 
 <template>
@@ -39,7 +39,7 @@ defineEmits(['voltal', 'increment-book', 'decrement-book'])
             </tr>
           </tbody>
         </table>
-        <button @click="$emit('voltal')" class="outlined">Voltar para loja</button>
+        <button @click="$emit('hide-cart')" class="outlined">Voltar para loja</button>
         <div class="cart-summary">
           <div class="cupom">
             <input type="text" placeholder="Código do cupom" />

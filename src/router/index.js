@@ -1,35 +1,44 @@
-import HomeView from "@/views/HomeView.vue";
-import { createWebHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
-const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
+import HomeView from "@/views/HomeView.vue";
+
+const routes = [
         {
-            path: "/" ,
-            name: "Home" ,
-            component: HomeView 
+            path: '/' ,
+            name: 'Home' ,
+            component: HomeView
         },
         {
-            path: "/equipe" ,
+            path: '/equipe' ,
             name: 'Team' ,
             component: () => import(`@/views/TeamView.vue`),
         },
         {
-            path: "/termos" ,
+            path: '/termo' ,
             name: 'Termo' ,
-            component: () => import('@/views/TermoView.vue'),
+            component: () => import(`@/views/TermoView.vue`),
         },
         {
-            path: "/Envio" ,
+            path: '/envio' ,
             name: 'Envio' ,
-            component: () => import('@/views/EnvioView.vue'),
+            component: () => import(`@/views/EnvioView.vue`),
         },
         {
-            path: "/Devolucoes" ,
-            name: 'Devolucoes',
-            component: () => import('@/views/DevolucoesView.vue'),
-        }
-    ]
+            path: '/devolucoes' ,
+            name: 'Devoluções' ,
+            component: () => import(`@/views/DevolucoesView.vue`),
+        },
+        {
+            path: '/livro/:id',
+            name: 'Book',
+            component: () => import('@/views/BookView.vue'),
+            props: true,
+        },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;
