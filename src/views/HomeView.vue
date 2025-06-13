@@ -13,7 +13,7 @@ const cartStore = useCartStore();
 </script>
 
 <template>
-     <main v-if="showCart">
+     <main v-if="cartStore.showCart">
     <CartComponent 
        v-if="cartStore.showCart"
     :cart="cartStore.cart"
@@ -23,7 +23,6 @@ const cartStore = useCartStore();
     />
   </main>
   <main v-else>
-    <button @click="showCart = true ">ir para carrinho</button>
     <HeroComponent />
     <FeaturedComponent />
     <BookListing  :books="booksStore.books"

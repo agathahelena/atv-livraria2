@@ -1,6 +1,6 @@
 <script setup>
-import { useCartStore } from '@/stores/cart';
-const cartStore = useCartStore();
+import { useCartStore } from '@/stores/cart'
+const cartStore = useCartStore()
 
 </script>
 
@@ -23,8 +23,9 @@ const cartStore = useCartStore();
             <li><RouterLink to="/Devolucoes">Devoluções</RouterLink></li>
           </ul>
           <ul class="icons">
-            <li @click="cartStore.showCart = !cartStore.showCart"></li>
-            <span class="mdi mdi-cart"></span>
+            <li @click="cartStore.showCart = !cartStore.showCart">           
+              <span class="mdi mdi-cart"></span>
+            </li>
             <li><span class="mdi mdi-heart"></span></li>
             <li><span class="mdi mdi-account"></span></li>
           </ul>
